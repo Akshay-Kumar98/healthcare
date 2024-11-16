@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/animate.css">
+    <link rel="stylesheet" href="assets/slick-theme.css" />
+    <link rel="stylesheet" href="assets/slick.css" />
+    <link rel="stylesheet" href="assets/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.0.0/apexcharts.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container-fluid">
+            <nav class="nav-flex d-flex">
+
+                <div class="nav-left">
+                    <div class="bar">
+                        <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+
+                    <div class="logo">
+                        <img src="images/favicon.png" alt="logo" class="img-fluid">
+                    </div>
+
+                    <div class="logo-text">
+                        <h3>Management Live</h3>
+                    </div>
+                </div>
+
+
+                <div class="nav-right">
+
+                    <div class="nav-inner">
+                        <div class="menu">
+                            <ul>
+                                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                                <li><a href="#"><i class="fa-solid fa-user-nurse"></i> Admissions</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Admission New</a></li>
+                                        <li><a href="#">Admission Old</a></li>
+                                        <li><a href="#">New Student</a></li>
+                                        <li><a href="#">Old Student</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="menu-icon">
+                            <div class="menu-btn">
+                                <h4>AB</h4>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="#">Dashboard</a></li>
+                                <li><a href="#">Log Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <section class="layout">
+        <div class="sidebar">
+            <ul class="move-aside">
+                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i> <span>Search</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-filter"></i> <span>Filter</span></a></li>
+                <li><a href="#"><i class="fa-regular fa-calendar-days"></i> <span>Calendar</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-truck-medical"></i> <span>Medical</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-hospital"></i> <span>Hopsital</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-user-doctor"></i> <span>Doctor</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-stethoscope"></i> <span>Nurse</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-bag-shopping"></i> <span>Pharmacy</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-globe"></i> <span>World</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-route"></i> <span>Route</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-diagram-project"></i> <span>Project</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-signal"></i> <span>Signal</span></a></li>
+
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="metric-box">
+                            <h3>Key Metrics</h3>
+
+                            <div class="time-box active d-flex flex-wrap">
+                                <div class="time-box-text">
+                                    <h5>Queue to Registration</h5>
+                                    <h1>Registration Time</h1>
+                                </div>
+
+                                <div class="time-icontext">
+                                    <div class="time-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <h4>02:34</h4>
+                                </div>
+
+                            </div>
+
+                            <div class="time-box time-one d-flex flex-wrap">
+                                <div class="time-box-text">
+                                    <h5>Registration to Triage</h5>
+                                    <h2>Time to Triage </h2>
+                                </div>
+
+                                <div class="time-icontext">
+                                    <div class="time-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <h4>00:34</h4>
+                                </div>
+
+                            </div>
+
+                            <div class="time-box time-two d-flex flex-wrap">
+                                <div class="time-box-text">
+                                    <h5>Triage to Consult</h5>
+                                    <h2>Time to Consult </h2>
+                                </div>
+
+                                <div class="time-icontext">
+                                    <div class="time-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <h4>00:34</h4>
+                                </div>
+
+                            </div>
+
+                            <div class="time-box d-flex flex-wrap">
+                                <div class="time-box-text">
+                                    <h5>Triage End to Discharge</h5>
+                                    <h2>In Zone Time </h2>
+                                </div>
+
+                                <div class="time-icontext">
+                                    <div class="time-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <h4>02:34</h4>
+                                </div>
+
+                            </div>
+
+                            <div class="time-box d-flex flex-wrap">
+                                <div class="time-box-text">
+                                    <h5>Consultation to Discharge</h5>
+                                    <h2>Treatment Time </h2>
+                                </div>
+
+                                <div class="time-icontext">
+                                    <div class="time-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <h4>02:34</h4>
+                                </div>
+
+                            </div>
+
+                            <div class="time-box d-flex flex-wrap">
+                                <div class="time-box-text">
+                                    <h5>Lab Order Request to Processing</h5>
+                                    <h2>Lab Processing Time</h2>
+                                </div>
+
+                                <div class="time-icontext">
+                                    <div class="time-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <h4>02:34</h4>
+                                </div>
+
+                            </div>
+
+                            <div class="time-box d-flex flex-wrap">
+                                <div class="time-box-text">
+                                    <h5>Radiology Order Request to Processing</h5>
+                                    <h2>Radiology Processing Time</h2>
+                                </div>
+
+                                <div class="time-icontext">
+                                    <div class="time-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <h4>02:34</h4>
+                                </div>
+
+                            </div>
+
+
+                            <div class="time-box time-last d-flex flex-wrap">
+                                <div class="time-box-text">
+                                    <h5>UCC Discharge to IP Bed Allotment</h5>
+                                    <h2>IP Transfers</h2>
+                                </div>
+
+                                <div class="time-center">
+                                    <i class="fa-solid fa-user-secret"></i>
+                                    <h5>18</h5>
+                                </div>
+
+                                <div class="time-icontext">
+                                    <div class="time-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <h4>00:34</h4>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="visit-box">
+
+                            <div class="visit-left">
+                                <h5>Total Visits</h5>
+                                <h2>142</h2>
+                            </div>
+
+                            <div class="visit-right">
+                                <h5>Visit Time</h5>
+                                <p>Registration to discharge</p>
+                                <h2>02:34</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="metric-bottom-box d-flex flex-wrap">
+
+                            <div class="metric-bottom metric-bottom-one d-flex flex-wrap">
+                                <div class="metric-bottom-text">
+                                    <h5><i class="fa-solid fa-notes-medical"></i> Insurance</h5>
+                                </div>
+
+                                <div class="metric-bottom-icontext">
+                                    <h4>86</h4>
+
+                                    <div class="metric-bottom-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <h4>00:34</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="metric-bottom metric-bottom-two d-flex flex-wrap">
+                                <div class="metric-bottom-text">
+                                    <h5><i class="fa-solid fa-wallet"></i> Self Pay</h5>
+                                </div>
+
+                                <div class="metric-bottom-icontext">
+                                    <h4>58</h4>
+
+                                    <div class="metric-bottom-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <h4>02:34</h4>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="metric-bottom metric-bottom-three d-flex flex-wrap">
+                                <div class="metric-bottom-text">
+                                    <h5><i class="fa-solid fa-globe"></i> International</h5>
+                                </div>
+
+                                <div class="metric-bottom-icontext">
+                                    <h4>78</h4>
+
+                                    <div class="metric-bottom-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <h4>02:34</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="metric-bottom metric-bottom-four d-flex flex-wrap">
+                                <div class="metric-bottom-text">
+                                    <h5><i class="fa-solid fa-location-dot"></i> Local</h5>
+                                </div>
+
+                                <div class="metric-bottom-icontext">
+                                    <h4>86</h4>
+
+                                    <div class="metric-bottom-icon">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <h4>00:34</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-8 col-md-12 col-sm-12">
+
+                        <div class="row">
+
+                            <div class="col-lg-8 col-md-12 col-sm-12">
+                                <div class="statistic-box shadow">
+
+                                    <div class="static-flex d-flex">
+                                        <div class="static-large">
+                                            <h3>Zone Statistics</h3>
+                                        </div>
+                                        <div class="static-green">
+                                            <h3>Green Zone</h3>
+                                        </div>
+                                        <div class="static-yellow">
+                                            <h3>Yellow Zone</h3>
+                                        </div>
+                                        <div class="static-red">
+                                            <h3>Red Zone</h3>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="static-inner-content d-flex">
+
+                                        <div class="static-large">
+
+                                            <div class="static-iconbox d-flex">
+                                                <div class="static-icon"><i class="fa-solid fa-users"></i>
+                                                </div>
+
+                                                <div class="static-text">
+                                                    <h4>Total Visits</h4>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="static-green">
+                                            <div class="static-green-inner">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-yellow">
+                                            <div class="static-yellow-inner">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-red">
+                                            <div class="static-red-inner">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="static-inner-content d-flex">
+
+                                        <div class="static-large">
+
+                                            <div class="static-iconbox d-flex">
+                                                <div class="static-icon"><i class="fa-solid fa-anchor"></i>
+                                                </div>
+
+                                                <div class="static-text">
+                                                    <h4>Active</h4>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="static-green">
+                                            <div class="static-green-inner">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-yellow">
+                                            <div class="static-yellow-inner">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-red">
+                                            <div class="static-red-inner">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="static-inner-content d-flex">
+
+                                        <div class="static-large">
+
+                                            <div class="static-iconbox d-flex">
+                                                <div class="static-icon"><i class="fa-solid fa-suitcase-rolling"></i>
+                                                </div>
+
+                                                <div class="static-text">
+                                                    <h4>Discharged</h4>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="static-green">
+                                            <div class="static-green-inner">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-yellow">
+                                            <div class="static-yellow-inner">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-red">
+
+                                            <div class="static-red-inner">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="static-inner-content d-flex">
+
+                                        <div class="static-large">
+
+                                            <div class="static-iconbox d-flex">
+                                                <div class="static-icon"><i class="fa-solid fa-business-time"></i>
+                                                </div>
+
+                                                <div class="static-text">
+                                                    <h4>Average Triage Time</h4>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="static-green">
+                                            <div class="static-green-inner static-green-abso">
+                                                <h4><i class="fa-regular fa-clock"></i> 00:34</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-yellow">
+                                            <div class="static-yellow-inner static-yellow-abso static-yellow-sec">
+                                                <h4><i class="fa-regular fa-clock"></i> 02:34</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-red">
+                                            <div class="static-red-inner static-red-abso static-red-sec">
+                                                <h4><i class="fa-regular fa-clock"></i> 02:34</h4>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="static-inner-content d-flex">
+
+                                        <div class="static-large">
+
+                                            <div class="static-iconbox d-flex">
+                                                <div class="static-icon"><i class="fa-regular fa-clock"></i>
+                                                </div>
+
+                                                <div class="static-text">
+                                                    <h4>Average Hold Time</h4>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="static-green">
+                                            <div class="static-green-inner static-green-abso static-green-sec">
+                                                <h4><i class="fa-regular fa-clock"></i> 02:34</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-yellow">
+                                            <div class="static-yellow-inner static-yellow-abso static-yellow-sec">
+                                                <h4><i class="fa-regular fa-clock"></i> 02:34</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-red">
+                                            <div class="static-red-inner static-red-abso ">
+                                                <h4><i class="fa-regular fa-clock"></i> 00:34</h4>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="static-inner-content d-flex">
+
+                                        <div class="static-large">
+
+                                            <div class="static-iconbox d-flex">
+                                                <div class="static-icon"><i class="fa-regular fa-user"></i>
+                                                </div>
+
+                                                <div class="static-text">
+                                                    <h4>Average Visit Time</h4>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="static-green">
+                                            <div class="static-green-inner static-green-abso">
+                                                <h4><i class="fa-regular fa-clock"></i> 00:34</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-yellow">
+                                            <div class="static-yellow-inner static-yellow-abso">
+                                                <h4><i class="fa-regular fa-clock"></i> 00:34</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="static-red">
+                                            <div class="static-red-inner static-red-abso">
+                                                <h4><i class="fa-regular fa-clock"></i> 00:34</h4>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="chart-one" id="chart-interval"></div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="chart-one chart-two" id="chart-zone"></div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="chart-one chart-two" id="chart-patient-interval"></div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="chart-one chart-two" id="chart-patient-doctor"></div>
+                            </div>
+                        </div>
+
+                        <div class="row bottom-last-row">
+
+                            <div class="col-lg-2 col-md-6 col-sm-12">
+                                <div class="waiting-box">
+                                    <h5>Current</h5>
+                                    <h3>Waiting Status</h3>
+                                    <div class="waiting-icon">
+                                        <h2><i class="fa-solid fa-wheelchair"></i></h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                                <div class="bottom-box">
+                                    <div class="bottom-time-box">
+
+                                        <div class="time-head">
+                                            <i class="fa-solid fa-briefcase-medical"></i>
+                                            <h5>For</h5>
+                                            <h3>Triage</h3>
+                                        </div>
+
+                                        <div class="time-text-flex">
+                                            <div class="time-text">
+                                                <i class="fa-solid fa-user-doctor"></i>
+                                                <h2>18</h2>
+                                            </div>
+
+                                            <div class="time-text time-text-two">
+                                                <i class="fa-regular fa-clock"></i>
+                                                <h2>02:34</h2>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bottom-time-box time-box-two">
+
+                                        <div class="time-head">
+                                            <i class="fa-solid fa-briefcase-medical"></i>
+                                            <h5>For</h5>
+                                            <h3>Consultation</h3>
+                                        </div>
+
+                                        <div class="time-text-flex">
+                                            <div class="time-text">
+                                                <i class="fa-solid fa-user-doctor"></i>
+                                                <h2>28</h2>
+                                            </div>
+
+                                            <div class="time-text time-text-sec">
+                                                <i class="fa-regular fa-clock"></i>
+                                                <h2>00:34</h2>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="doctor-list-box">
+
+                                    <div class="list-head">
+                                        <div class="list-head-abso">
+                                            <img src="images/list-bg.png" alt="list-bg">
+                                        </div>
+
+                                        <div class="list-text-flex">
+                                            <div class="list-text">
+                                                <h3> <i class="fa-solid fa-user-doctor"></i> Doctor Statistics</h3>
+                                            </div>
+
+                                            <div class="list-search-bar">
+                                                <div class="list-search-input">
+                                                    <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                                    <input type="text" placeholder="Search here...">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="doctor-table">
+                                        <div class="doctor-table-head">
+                                            <h3>Doctor</h3>
+                                            <h3>Pateints</h3>
+                                            <h3>Time</h3>
+                                        </div>
+
+                                        <div class="doctor-time-list-box">
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Alkmal El Swami</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>00:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-list">
+
+                                                <div class="doctor-name">
+                                                    <p>Dr.Ehab Adeb</p>
+                                                </div>
+
+                                                <div class="doctor-count">
+                                                    <h5>32</h5>
+                                                </div>
+
+                                                <div class="doctor-time">
+                                                    <div class="doctor-time-text">
+                                                        <i class="fa-regular fa-clock"></i>
+                                                        <h4>02:34</h4>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="doctor-pagination-box">
+                                                <div class="doctor-pagination">
+                                                    <button class="prev-btn hidden"><i
+                                                            class="fa-solid fa-angle-left"></i></button>
+                                                    <div class="page-numbers"></div>
+                                                    <button class="next-btn"><i
+                                                            class="fa-solid fa-angle-right"></i></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.0.0/apexcharts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js"></script>
+    <script>
+        $('.menu ul li > ul.sub-menu').before('<div class="click-btn"><i class="fa-solid fa-angle-down"></i></div>');
+
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
